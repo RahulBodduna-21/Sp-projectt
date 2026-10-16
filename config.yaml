@@ -1,0 +1,45 @@
+sampling:
+  target_hz: 50
+  regularity_threshold: 0.1
+
+gravity:
+  cutoff_hz: 0.5
+  order: 3
+
+butterworth:
+  order: 4
+  low_cutoff_hz: 0.7
+  high_cutoff_hz: 15.0
+
+hampel:
+  window_size: 7
+  n_sigma: 3.0
+
+window:
+  duration_seconds: 2.0
+  overlap_seconds: 0.0
+
+model:
+  type: random_forest
+  n_estimators: 300
+  random_state: 42
+  class_weight: balanced
+  n_jobs: -1
+
+classes:
+  - SMOOTH
+  - ROUGH
+  - POTHOLE
+  - SPEED BREAKER
+
+mapping:
+  gps_association_method: midpoint
+  min_gps_accuracy_m: 50.0
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  data_features: data/features
+  data_predictions: data/predictions
+  models: models
+  results: results

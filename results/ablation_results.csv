@@ -1,0 +1,6 @@
+experiment,name,processing,sensors,frequency_features,test_strategy,accuracy,macro_f1,weighted_f1,pothole_f1,speed_breaker_f1,smooth_f1,rough_f1,num_features
+A,Raw,RAW,Acc,No,GroupShuffleSplit (Session-Aware),0.949,0.8675,0.9474,0.6667,0.9515,0.9628,0.8889,51
+B,Filtered,FILTERED,Acc,No,GroupShuffleSplit (Session-Aware),0.9433,0.8908,0.9424,0.7778,0.9422,0.9543,0.8889,51
+C,Calibrated,CALIBRATED,Acc,No,GroupShuffleSplit (Session-Aware),0.9263,0.8153,0.9241,0.5882,0.9333,0.9396,0.8,51
+D,Calibrated + Gyro,CALIBRATED ACC+GYRO,Acc + Gyro,No,GroupShuffleSplit (Session-Aware),0.9292,0.8275,0.9282,0.6316,0.9367,0.9418,0.8,67
+E,Calibrated + Gyro + FFT,CALIBRATED ACC+GYRO+FFT,Acc + Gyro,Yes,GroupShuffleSplit (Session-Aware),0.9292,0.8275,0.9282,0.6316,0.9367,0.9418,0.8,75
